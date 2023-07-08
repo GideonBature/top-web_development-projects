@@ -1,0 +1,2 @@
+# Project-Rock-Paper-Scissors
+This is a game that takes in a computer choice of either Rock, Paper or Scissors and also takes in that of the User and then compares the results, which afterwards displays who wins base on how the game work, Paper win against rock as paper will cover rock, Rock wins against Scissors as Rock can break Scissors, while Scissors wins against Paper, as Scissors can cut Paper.

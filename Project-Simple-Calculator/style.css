@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  
+  .component {
+    background-color: black;
+    color: white;
+    width: 500px;
+    padding: 10px;
+  }
+  
+  
+  .screen {
+    text-align: right;
+    padding: 30px 20px;
+    color: white;
+    font-size: 30px;
+  }
+  
+  
+  .cal-button {
+    padding: 20px 20px;
+    text-align: right;
+    background-color: #d8d9db;
+    height: 100px;
+    width: 23.75%;
+    border: none;
+    border-radius: 0;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3%;
+  }
+  
+  
+  .double {
+    width: 49.1%;
+  }
+  
+  
+  .triple {
+    width: 74.5%;
+  }
+  
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    margin-bottom: 1.5%;
+  }
+  
+  
+  .cal-button:last-child {
+    background-color: rgb(255, 129, 107);
+    color: white;
+  }
+  
+  
+  .cal-button:last-child:hover {
+    background-color: tomato;
+  }
+  .cal-button:last-child:active {
+    background-color: red;
+  }
+  
+  
+  .cal-button:hover {
+    background-color: gray;
+  }
+  
+  
+  .cal-button:active {
+    background-color: rgb(73, 73, 73);
+  }
+
+  footer {
+    text-align: center;
+  }

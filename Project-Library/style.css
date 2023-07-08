@@ -1,0 +1,11 @@
+/* CSS */
+#add-book-form {
+    display: none;
+  }
+
+  
+  tr > tbody {
+    margin: 65px;
+    padding: 65px;
+    width: 50px;
+  }

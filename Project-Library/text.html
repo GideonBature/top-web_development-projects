@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+<table class="w-full">
+  <thead>
+    <tr class="bg-gray-50">
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Author</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pages</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Completed</th>
+      <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Rows will be added dynamically via JavaScript -->
+  </tbody>
+</table>
+
+<button id="add-book-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-4">Add Book</button>
+
+<script>
+  const tbody = document.querySelector("tbody");
+
+  // Function to add a new row to the table
+  function addRow() {
+    const title = "The Catcher in the Rye";
+    const author = "J.D. Salinger";
+    const pages = "224";
+    const completed = "Yes";
+
+    const row = tbody.insertRow();
+    const titleCell = row.insertCell();
+    const authorCell = row.insertCell();
+    const pagesCell = row.insertCell();
+    const completedCell = row.insertCell();
+    const actionsCell = row.insertCell();
+
+    titleCell.textContent = title;
+    authorCell.textContent = author;
+    pagesCell.textContent = pages;
+    completedCell.textContent = completed;
+
+    const editButton = document.createElement("button");
+    editButton.innerText = "Edit";
+    editButton.classList.add("bg-gray-500", "hover:bg-gray-700", "text-white", "font-bold", "py-2", "px-4", "rounded", "mr-2");
+    editButton.addEventListener("click", () => editRow(row));
+
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.classList.add("bg-red-500", "hover:bg-red-700", "text-white", "font-bold", "py-2", "px-4", "rounded");
+    deleteButton.addEventListener("click", () => deleteRow(row));
+
+    actionsCell.appendChild(editButton);
+    actionsCell.appendChild(deleteButton);
+  }
+
+  // Function to edit a row in the table
+  function editRow(row) {
+    // ...
+  }
+
+  // Function to delete a row from the table
+  function deleteRow(row) {
+    tbody.removeChild(row);
+  }
+
+  // Connect the "Add Book" button to the addRow() function
+  const addBookBtn = document.getElementById("add-book-btn");
+  addBookBtn.addEventListener("click", addRow);
+</script>
+
+</body>
+</html>

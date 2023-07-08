@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>E-Lib</title>
+</head>
+<body class="bg-gray-200 dark:bg-gray-800">
+  <nav class="bg-gradient-to-br from-purple-800 to-blue-800 p-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <h1 class="text-white text-2xl font-bold ml-8">E-lib</h1>
+      </div>
+      <div class="flex items-center space-x-8">
+<!-- HTML -->
+<button id="add-book-btn" class="rounded-full py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xl">
+    +
+  </button>
+
+  
+
+  <!-- form for book entry -->
+
+  <div id="add-book-form" class="hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center">
+    <form id="form" class="bg-white p-6 rounded-lg">
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="title-input">
+          Title
+        </label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title-input" type="text" placeholder="Enter title..." required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="author-input">
+          Author
+        </label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="author-input" type="text" placeholder="Enter author..." required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="pages-input">
+          Pages
+        </label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="pages-input" type="number" placeholder="Enter number of pages..." required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2">
+          Completed?
+        </label>
+        <div class="flex items-center mb-2">
+          <input class="form-checkbox h-4 w-4 text-blue-600" id="completed-input" type="checkbox" name="completed" value="yes">
+          <label class="ml-2 block text-gray-700 font-bold" for="completed-input">
+            Yes
+          </label>
+      </div>
+      <div class="flex items-center justify-between">
+        <button id="add-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+          Add Book
+        </button>
+        <button id="cancel-btn" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+          Cancel
+        </button>
+      </div>
+    </form>
+    </div>
+      </div>
+    </div>
+
+    <!-- form for edit entry -->
+    <div id="edit-book-form" class="p-4 hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center">
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="completed">
+            Completed:
+          </label>
+          <input class="edit-input mr-2 leading-tight" type="checkbox" id="completed" name="completed" value="yes">
+          <label class="text-sm text-gray-700" for="completed">
+            Mark as completed book
+          </label>
+        </div>
+        <div class="flex items-center justify-between">
+          <button id="update-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            Update
+          </button>
+          <button id="cancel-edit-btn" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+    
+  </nav>
+
+  <h1 class="flex justify-center flex-col items-center font-bold text-4xl my-5 text-gray-200">MY BOOK RECORD</h1>
+  <p class="flex mx-10 text-gray-300 justify-center items-center flex-col align-center text-center pb-5">This is an electronic book record keeper where you can keep records of your books: the title, author, number of pages as well as whether you have read the book or not.</p>
+
+<!-- The Table -->
+  
+  <table class="w-full table-auto" style="border-collapse: separate; border-spacing: 0 8px;">
+    <thead>
+      <tr class="bg-gradient-to-br from-purple-800 to-blue-800 rounded-lg">
+        <th class="w-1/12 px-6 py-3 text-left text-s font-bold text-white uppercase tracking-wider text-center">S/N</th>
+        <th class="px-6 py-3 text-left text-s font-bold text-white uppercase tracking-wider text-center">Title</th>
+        <th class="w-2/12 px-6 py-3 text-left text-s font-bold font-medium text-white uppercase tracking-wider text-center">Author</th>
+        <th class="w-2/12 px-6 py-3 text-left text-s font-bold text-white uppercase tracking-wider text-center">Pages</th>
+        <th class="w-1/12 px-6 py-3 text-left text-s font-bold text-white uppercase tracking-wider text-center">Completed</th>
+        <th class="w-1/12 px-6 py-3 text-left text-s font-bold text-white uppercase tracking-wider text-center">Action</th>
+      </tr>
+    </thead>
+    <tbody class="text-white text-center bg-blue-900 font-light">
+      <!-- Rows will be added dynamically via JavaScript -->
+    </tbody>
+  </table>
+
+  <footer class="fixed bottom-0 left-0 w-full text-center text-white text-sm py-2 bg-gradient-to-br from-purple-800 to-blue-800">
+    <p>&copy; Web3Bene 2023 @ The Odin Project</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

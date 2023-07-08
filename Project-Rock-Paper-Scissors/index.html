@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ROCK, PAPER & SCISSORS GAME</h1>
+    <div class="container">
+        <div class="content1">
+          <h2>Win 5 Rounds to Emerge The Victor</h2>
+        </div>
+        <div class="content2">
+          <div class="player">
+            <p>Player Point</p>
+            <p class="pp" id="pp">0</p>
+            <p class="pString str"></p>
+          </div>
+          <div class="computer">
+            <p>Computer Point</p>
+            <p class="cp" id="cp">0</p>
+            <p class="cString str"></p>
+          </div>
+        </div>
+        <div class="btn">
+          <button data-set="rock" class="options">Rock</button>
+          <button data-set="paper" class="options">Paper</button>
+          <button data-set="scissors" class="options">Scissors</button>
+        </div>
+        <div class="content3">
+          <p>The winner is: <span class="winner"></span></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <!-- <script src="test.js"></script> -->
+  </body>
+</html>

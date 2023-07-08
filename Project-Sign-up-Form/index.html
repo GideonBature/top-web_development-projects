@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign-up Form</title>
+</head>
+<body>
+
+    <div id="container" class="container">
+        <div class="img-content">
+            <div class="logo-container">
+                <img src="odin-logo.png" alt="top-logo" class="logo">
+
+                <p class="logo-name"> ODIN</p>  
+
+            </div>
+            <div class="credit">
+                <p>Photo by <a class="c-white" href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a class="c-white" href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></p>
+            </div>
+
+        </div>
+        <div class="form-content">
+            <h3 class="form-content-text">This is not a real online service! you know you need something like this in your life to help you realize your deepest dreams.
+                <p>Sign up now to get started</p>
+                <p>you know you want to.</p>
+            </h3>
+            <h2>Let's do this!</h2>
+            <form action="">
+                <div class="first-name">
+                    <label for="first-name">First Name</label><br>
+                    <input type="text" name="first-name" id="first-name" required pattern="\w{2,20}" title="Please use only Alphabets (at least 2)">
+                </div>
+                <div class="last-name">
+                    <label for="last-name">Last Name</label><br>
+                    <input type="text" name="last-name" id="last-name" required pattern="\w{2,20}" title="Please use only Alphabets (at least 2)">
+                </div>
+
+                <div class="email">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="phone">
+                    <label for="phone-number">Phone Number</label><br>
+                    <input type="tel" name="phone" id="phone-number" required pattern="\d{11,14}" title="Please use only Numbers (atleast 11 digits)">
+                </div>
+                
+                <div class="password">
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="password" required pattern="\d{6,20}" title="Must be atleast 6 (numbers)">
+                </div>
+                <div class="cpassword">
+                    <label for="cpassword">Confirm Password</label><br>
+                    <input type="password" name="cpassword" id="cpassword" required>
+                </div>
+
+                <div id="errorMessage" style="display:none; color:red">Passwords does not match</div>
+
+                
+                <div class="btn"><br>
+                    <button type="submit">Create Account</button>
+                </div>
+
+            </form>
+            <p class="footer">Already Have an account? <a href="#login">Log in</a></p>
+        </div>
+
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
